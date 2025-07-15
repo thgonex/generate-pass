@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Generate password</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="pass.css">
+  <script src="pass.js" defer></script>
+</head>
+<body>
+   <h1 id="h1">Генератор случайных паролей</h1>
+   
+  <div>
+    <label for="counterNum" class="forInput">Введите количество символов пароля (8-16)</label>
+    <input id="counterNum" type="number" placeholder="..." autofocus>
+  </div>
+
+  <div class="checkbox">
+    <label><input type="checkbox" id="useUpper" checked> Заглавные буквы</label>
+    <label><input type="checkbox" id="useDigits" checked> Цифры</label>
+    <label><input type="checkbox" id="useSymbols" checked> Символы</label>
+  </div>
+
+  <div id="password">Нажми "Сгенерировать"</div><br>
+  <button id="generateBtn" class="copyBtn">Сгенерировать</button>
+  <button class="copyBtn hideBtn">Скопировать</button>
+</body>
+</html>

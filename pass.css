@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Share+Tech&display=swap');
+
+body {
+  font-family: Nunito, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+#counterNum{
+  padding: 2px;
+  border-radius: 5px;
+  outline: none;
+}
+
+#counterNum:focus{
+  border: 2.5px solid rgb(53, 53, 175);
+}
+
+.checkbox{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#password {
+  font-size: 24px;
+  padding: 10px;
+  background: #eee;
+  display: inline-block;
+  cursor: pointer;
+  user-select: all;
+}
+
+.copyBtn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(112, 112, 217);
+  color: white;
+}
+
+/* Эти стили работают только на десктопах */
+@media (hover: hover) {
+  .copyBtn:hover {
+    opacity: 0.8;
+  }
+
+  .copyBtn:active {
+    transform: scale(0.95);
+  }
+}
+
+
+.hideBtn {
+  display: none;
+}
+
+
+
+/*MEDIA*/
+
+@media(max-width:596px){
+  #h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 434px) {
+  .copyBtn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 454px) {
+  .forInput {
+    font-size: 12px;
+  }
+
+  #password {
+    font-size: 18px;
+  }
+
+  #h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 350px) {
+  .copyBtn {
+    padding: 5px 5px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 332px) {
+  .forInput {
+    font-size: 10px;
+  }
+
+  #password {
+    font-size: 14px;
+  }
+
+  #h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 454px) {
+  .checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+}
