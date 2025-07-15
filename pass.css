@@ -220,6 +220,12 @@ footer {
   }
 }
 
+@media (max-width: 448) {
+  footer{
+    padding: 5px;
+  }
+}
+
 @media (max-width: 434px) {
   .copyBtn {
     padding: 5px 10px;
