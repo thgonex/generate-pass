@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Share+Tech&display=swap');
 
-html, body{
+/* Универсальные настройки */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
   height: 100%;
-  margin: 0px;
+  margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Запрещаем горизонтальный скролл глобально */
 }
 
 body {
@@ -13,37 +20,56 @@ body {
   min-height: 100vh;
   font-family: Nunito, sans-serif;
   text-align: center;
+  overflow-x: hidden; /* дополнительно */
 }
 
-header{
+/* Шапка */
+header {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  max-width: 100vw;
   display: flex;
-  background-color: white;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
-  width: 100%;
+  padding: 0 15px;
   height: 60px;
+  background-color: white;
   border-bottom: 2px solid rgb(145, 139, 139);
   box-shadow: 0 5px 10px rgb(112, 112, 217);
+  z-index: 10000;
+  overflow-x: hidden;
 }
 
-#svgLogo{
-  margin: 0px;
+#svgLogo {
+  margin: 0;
   width: 35px;
   height: 35px;
-  margin-left: 15px;
+  margin-left: 0; /* Убрал margin-left чтобы не сдвигать слишком сильно */
+  max-width: 100%;
+  height: auto;
 }
 
-.nav-links a{
+.nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  padding-right: 15px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.nav-links a {
   color: black;
   font-weight: 900;
   text-decoration: none;
-  margin-right: 30px;
+  margin: 0; /* убираем margin-right */
+  white-space: nowrap;
+  font-size: 16px; /* базовый размер */
 }
 
+/* Попапы */
 .popup {
   position: fixed;
   top: 70px;
@@ -54,31 +80,42 @@ header{
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   z-index: 1000;
+  max-width: 90vw;
+  word-wrap: break-word;
 }
 
 .hidden {
   display: none;
 }
 
+/* Основной контент */
 main {
   flex: 1;
   padding-top: 110px;   /* Отступ под шапку */
   padding-bottom: 100px;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-#counterNum{
+#counterNum {
   padding: 2px;
   border-radius: 5px;
   outline: none;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-#counterNum:focus{
+#counterNum:focus {
   border: 2.5px solid rgb(112, 112, 217);
 }
 
-.checkbox{
+.checkbox {
   margin-top: 10px;
   margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #password {
@@ -88,6 +125,8 @@ main {
   display: inline-block;
   cursor: pointer;
   user-select: all;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .copyBtn {
@@ -98,6 +137,8 @@ main {
   border: none;
   background-color: rgb(112, 112, 217);
   color: white;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.1s ease;
 }
 
 /* Эти стили работают только на десктопах */
@@ -111,12 +152,11 @@ main {
   }
 }
 
-
 .hideBtn {
   display: none;
 }
 
-
+/* Футер */
 footer {
   width: 100%;
   padding: 20px 10px;
@@ -125,6 +165,8 @@ footer {
   box-shadow: 0 -4px 10px rgba(112, 112, 217, 0.3);
   text-align: center;
   margin-top: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .footer-content {
@@ -135,6 +177,8 @@ footer {
   flex-wrap: wrap;
   font-size: 14px;
   color: #333;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .footer-content p,
@@ -149,18 +193,21 @@ footer {
   display: flex;
   align-items: center;
   gap: 6px;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .telegram-icon {
   width: 20px;
   height: 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 
+/* MEDIA QUERIES */
 
-/*MEDIA*/
-
-@media(max-width:596px){
+@media(max-width: 596px){
   #h1 {
     font-size: 22px;
   }
@@ -175,9 +222,9 @@ footer {
   #counterNum {
     display: block;
     margin: 0 auto;
+    width: 90%; /* чтобы не вылезал */
+    max-width: 300px;
   }
-
-  /* Если label и input обёрнуты в div — оформим его тоже */
 }
 
 @media (max-width: 470px) {
@@ -192,14 +239,11 @@ footer {
 
 @media (max-width: 454px) {
   .checkbox {
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 10px;
   }
-}
 
-@media (max-width: 454px) {
   .forInput {
     font-size: 14px;
   }
@@ -212,13 +256,14 @@ footer {
     font-size: 22px;
   }
 
-  .headerNav {
+  .nav-links a {
     font-size: 14px;
     margin-right: 0;
   }
 
   #counterNum {
     width: 120px;
+    max-width: 100%;
   }
 }
 
@@ -239,7 +284,7 @@ footer {
     font-size: 10px;
   }
 
-  .headerNav {
+  .nav-links a {
     font-size: 12px;
     margin-right: 0;
   }
