@@ -1,9 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Share+Tech&display=swap');
 
+html, body{
+  height: 100%;
+  margin: 0px;
+  padding: 0;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Nunito, sans-serif;
   text-align: center;
-  padding: 50px;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 100vw;
+  height: 60px;
+  border-bottom: 2px solid rgb(145, 139, 139);
+  box-shadow: 0 5px 10px rgb(112, 112, 217);
+}
+
+#svgLogo{
+  margin: 0px;
+  width: 35px;
+  height: 35px;
+  margin-left: 15px;
+}
+
+.nav-links a{
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.popup {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: white;
+  border: 2px solid rgb(112, 112, 217);
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  flex: 1;
+  padding-top: 110px;   /* Отступ под шапку */
+  padding-bottom: 100px;
 }
 
 #counterNum{
@@ -13,7 +72,7 @@ body {
 }
 
 #counterNum:focus{
-  border: 2.5px solid rgb(53, 53, 175);
+  border: 2.5px solid rgb(112, 112, 217);
 }
 
 .checkbox{
@@ -54,6 +113,40 @@ body {
 
 .hideBtn {
   display: none;
+}
+
+
+footer {
+  padding: 60px;
+  background-color: rgb(240, 240, 255);
+  border-top: 2px solid rgb(145, 139, 139);
+  box-shadow: 0 -4px 10px rgba(112, 112, 217, 0.3);
+  text-align: center;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #333;
+}
+
+.telegram-link {
+  text-decoration: none;
+  color: rgb(112, 112, 217);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.telegram-icon {
+  width: 20px;
+  height: 20px;
 }
 
 

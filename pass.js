@@ -96,3 +96,39 @@ hideBtn.addEventListener("click", () => {
 
 
 
+
+const projectBtn = document.getElementById('projectLink');
+const supportBtn = document.getElementById('supportLink');
+const projectPopup = document.getElementById('projectPopup');
+const supportPopup = document.getElementById('supportPopup');
+
+function closeAllPopups() {
+  projectPopup.classList.add('hidden');
+  supportPopup.classList.add('hidden');
+}
+
+// Открытие нужного окна и закрытие другого
+projectBtn.addEventListener('click', function(e) {
+   e.preventDefault();
+  const wasVisible = !projectPopup.classList.contains('hidden');
+  closeAllPopups();
+   if (!wasVisible) projectPopup.classList.remove('hidden');
+});
+
+supportBtn.addEventListener('click', function(e) {
+   e.preventDefault();
+  const wasVisible = !supportPopup.classList.contains('hidden');
+   closeAllPopups();
+   if (!wasVisible) supportPopup.classList.remove('hidden');
+ });
+
+// Закрытие при клике вне модалки
+document.addEventListener('click', function(e) {
+   const isPopup = e.target.closest('.popup');
+   const isNavLink = e.target === projectBtn || e.target === supportBtn;
+   if (!isPopup && !isNavLink) {
+     closeAllPopups();
+   }
+});
+
+
