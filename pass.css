@@ -4,6 +4,7 @@ html, body{
   height: 100%;
   margin: 0px;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -218,12 +219,6 @@ footer {
 
   #counterNum {
     width: 120px;
-  }
-}
-
-@media (max-width: 448) {
-  footer{
-    padding: 5px;
   }
 }
 
