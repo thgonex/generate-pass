@@ -23,7 +23,7 @@ header{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   border-bottom: 2px solid rgb(145, 139, 139);
   box-shadow: 0 5px 10px rgb(112, 112, 217);
@@ -159,16 +159,33 @@ footer {
   }
 }
 
-@media (max-width: 434px) {
-  .copyBtn {
-    padding: 5px 10px;
-    font-size: 14px;
+@media (max-width: 535px) {
+  .forInput {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  #counterNum {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Если label и input обёрнуты в div — оформим его тоже */
+ 
+}
+
+@media (max-width: 454px) {
+  .checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
   }
 }
 
 @media (max-width: 454px) {
   .forInput {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   #password {
@@ -178,6 +195,26 @@ footer {
   #h1 {
     font-size: 22px;
   }
+
+  .headerNav {
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  #counterNum {
+    width: 120px;
+  }
+}
+
+@media (max-width: 434px) {
+  .copyBtn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  #counterNum {
+    padding: 0;
+  }
 }
 
 @media (max-width: 350px) {
@@ -185,11 +222,16 @@ footer {
     padding: 5px 5px;
     font-size: 10px;
   }
+
+  .headerNav {
+    font-size: 12px;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 332px) {
   .forInput {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   #password {
@@ -199,13 +241,21 @@ footer {
   #h1 {
     font-size: 18px;
   }
+
+  #counterNum {
+    width: 80px;
+  }
+
+  .checkbox {
+    font-size: 12px;
+  }
 }
 
-@media (max-width: 454px) {
-  .checkbox {
-    display: flex;
+@media (max-width: 300px) {
+  .footer-content {
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
+    gap: 8px;
+    text-align: center;
   }
 }
