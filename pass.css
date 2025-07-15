@@ -117,13 +117,14 @@ main {
 
 
 footer {
-  padding: 60px;
+  width: 100%;
+  padding: 20px 10px;
   background-color: rgb(240, 240, 255);
   border-top: 2px solid rgb(145, 139, 139);
   box-shadow: 0 -4px 10px rgba(112, 112, 217, 0.3);
   text-align: center;
+  margin-top: auto;
 }
-
 
 .footer-content {
   display: flex;
@@ -133,6 +134,11 @@ footer {
   flex-wrap: wrap;
   font-size: 14px;
   color: #333;
+}
+
+.footer-content p,
+.footer-content a {
+  white-space: nowrap; /* Запрещает перенос строк */
 }
 
 .telegram-link {
@@ -171,7 +177,15 @@ footer {
   }
 
   /* Если label и input обёрнуты в div — оформим его тоже */
- 
+}
+
+@media (max-width: 454px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 454px) {
@@ -206,15 +220,6 @@ footer {
   }
 }
 
-@media (max-width: 447px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
-  }
-}
-
 @media (max-width: 434px) {
   .copyBtn {
     padding: 5px 10px;
@@ -238,17 +243,17 @@ footer {
   }
 }
 
-@media (max-width: 332px) {
+@media (max-width: 343px) {
   .forInput {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   #password {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   #h1 {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   #counterNum {
