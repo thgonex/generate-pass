@@ -207,7 +207,7 @@ footer {
   height: auto;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA */
 @media(max-width: 596px){
   #h1 {
     font-size: 22px;
