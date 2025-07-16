@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Share+Tech&display=swap');
 
-/* Универсальные настройки */
 *,
 *::before,
 *::after {
@@ -11,7 +10,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Запрещаем горизонтальный скролл глобально */
+  overflow-x: hidden; 
 }
 
 body {
@@ -20,7 +19,7 @@ body {
   min-height: 100vh;
   font-family: Nunito, sans-serif;
   text-align: center;
-  overflow-x: hidden; /* дополнительно */
+  overflow-x: hidden; 
 }
 
 /* Шапка */
@@ -46,9 +45,10 @@ header {
   margin: 0;
   width: 35px;
   height: 35px;
-  margin-left: 0; /* Убрал margin-left чтобы не сдвигать слишком сильно */
+  margin-left: 0; 
   max-width: 100%;
   height: auto;
+  transition: 0.3s;
 }
 
 .nav-links {
@@ -64,9 +64,9 @@ header {
   color: black;
   font-weight: 900;
   text-decoration: none;
-  margin: 0; /* убираем margin-right */
+  margin: 0; 
   white-space: nowrap;
-  font-size: 16px; /* базовый размер */
+  font-size: 16px;
 }
 
 /* Попапы */
@@ -91,7 +91,7 @@ header {
 /* Основной контент */
 main {
   flex: 1;
-  padding-top: 110px;   /* Отступ под шапку */
+  padding-top: 110px;  
   padding-bottom: 100px;
   max-width: 100vw;
   overflow-x: hidden;
@@ -141,7 +141,6 @@ main {
   transition: opacity 0.3s ease, transform 0.1s ease;
 }
 
-/* Эти стили работают только на десктопах */
 @media (hover: hover) {
   .copyBtn:hover {
     opacity: 0.8;
@@ -149,6 +148,10 @@ main {
 
   .copyBtn:active {
     transform: scale(0.95);
+  }
+
+  #svgLogo:hover{
+    transform: scale(1.2);
   }
 }
 
@@ -183,7 +186,7 @@ footer {
 
 .footer-content p,
 .footer-content a {
-  white-space: nowrap; /* Запрещает перенос строк */
+  white-space: nowrap;
 }
 
 .telegram-link {
@@ -222,7 +225,7 @@ footer {
   #counterNum {
     display: block;
     margin: 0 auto;
-    width: 90%; /* чтобы не вылезал */
+    width: 90%; 
     max-width: 300px;
   }
 }
