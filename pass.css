@@ -14,9 +14,6 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   font-family: Nunito, sans-serif;
   text-align: center;
   overflow-x: hidden; 
@@ -150,9 +147,22 @@ main {
     transform: scale(0.95);
   }
 
-  #svgLogo:hover{
-    transform: scale(1.2);
+  #svgLogo:hover {
+  animation: rotateBackAndForth 0.8s ease-in-out forwards;
+}
+
+@keyframes rotateBackAndForth {
+  0% {
+    transform: scale(1.2) rotate(0deg);
   }
+  50% {
+    transform: scale(1.2) rotate(30deg);
+  }
+  100% {
+    transform: scale(1.2) rotate(-360deg);
+  }
+}
+
 }
 
 .hideBtn {
@@ -160,7 +170,7 @@ main {
 }
 
 .allText{
-  margin-top:100px ;
+  margin-top:100px;
 }
 
 .divPass{
@@ -175,6 +185,8 @@ main {
   padding: 20px;
 }
 
+
+
 /* Футер */
 footer {
   width: 100%;
@@ -183,7 +195,6 @@ footer {
   border-top: 2px solid rgb(145, 139, 139);
   box-shadow: 0 -4px 10px rgba(112, 112, 217, 0.3);
   text-align: center;
-  margin-top: auto;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -279,6 +290,10 @@ footer {
     font-size: 22px;
   }
 
+  .textForBlocks{
+    font-size: 22px;
+  }
+
   .nav-links a {
     font-size: 14px;
     margin-right: 0;
@@ -323,6 +338,10 @@ footer {
   }
 
   #h1 {
+    font-size: 19px;
+  }
+
+  .textForBlocks{
     font-size: 19px;
   }
 
