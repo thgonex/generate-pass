@@ -159,6 +159,22 @@ main {
   display: none;
 }
 
+.allText{
+  margin-top:100px ;
+}
+
+.divPass{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.divPassBack{
+  background-color: #e5e5e5;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 20px;
+}
+
 /* Футер */
 footer {
   width: 100%;
@@ -208,6 +224,12 @@ footer {
 }
 
 /* MEDIA */
+@media(max-width: 760px){
+  .divPass{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 @media(max-width: 596px){
   #h1 {
     font-size: 22px;
