@@ -50,7 +50,7 @@ generateBtn.addEventListener("click", () => {
 
   const counterNumberValue = +counterStr
 
-  if (counterNumberValue > 16) {
+  if (counterNumberValue > 24) {
     passwordDisplay.textContent = "Пароль слишком длинный!"
     return
   } else if (counterNumberValue < 8 && counterNumberValue >= 0) {

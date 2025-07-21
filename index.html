@@ -35,14 +35,23 @@
     <h1 id="h1">Генератор случайных паролей</h1>
    
   <div id="GenPass">
-    <label for="counterNum" class="forInput">Введите количество символов пароля (8-16)</label>
+    <label for="counterNum" class="forInput">Введите количество символов пароля (8-24)</label>
     <input id="counterNum" type="number" placeholder="..." autofocus>
   </div>
 
   <div class="checkbox">
-    <label><input type="checkbox" id="useUpper" checked> Заглавные буквы</label>
-    <label><input type="checkbox" id="useDigits" checked> Цифры</label>
-    <label><input type="checkbox" id="useSymbols" checked> Символы</label>
+    <label>
+      <input type="checkbox" id="useUpper" class="checkbox_input" checked>
+      <span class="checkbox_span"></span> 
+      Заглавные буквы</label>
+    <label>
+      <input type="checkbox" id="useDigits" class="checkbox_input" checked>
+      <span class="checkbox_span"></span> 
+      Цифры</label>
+    <label>
+      <input type="checkbox" id="useSymbols" class="checkbox_input" checked> 
+      <span class="checkbox_span"></span>
+      Символы</label>
   </div>
 
   <div id="password">Нажми "Сгенерировать"</div><br>
